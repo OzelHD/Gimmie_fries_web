@@ -10,6 +10,7 @@
   }
 
   async function fetchPommes() {
+    console.log("🍟 Pommes Fetch Triggered!");
     loading = true;
     error = null;
     results = [];
@@ -107,7 +108,7 @@
       {#each results as item}
         <li class="bg-white shadow-md rounded-lg p-4 text-left">
           <div class="font-bold text-lg">{item.mensa}</div>
-          
+
           <div class="text-md font-semibold text-gray-800 mt-1">
             {@html highlightPommes(item.name)}
           </div>
