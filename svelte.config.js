@@ -3,24 +3,22 @@ import { sveltePreprocess } from 'svelte-preprocess';
 
 const dev = process.env.NODE_ENV === 'development';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: sveltePreprocess(),
-
-  kit: {
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: null,
-      strict: false
-    }),
-    paths: {
-      base: dev ? '' : '/Gimmie_fries_web'
-    },
-    prerender: {
-      entries: ['*']
-    }
-  }
+	preprocess: sveltePreprocess(),
+	kit: {
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: null,
+			strict: false
+		}),
+		paths: {
+			base: dev ? '' : '/Gimmie_fries_web'
+		},
+		prerender: {
+			handleMissingId: 'warn'
+		}
+	}
 };
 
 export default config;
