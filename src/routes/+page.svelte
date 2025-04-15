@@ -107,8 +107,15 @@
       {#each results as item}
         <li class="bg-white shadow-md rounded-lg p-4 text-left">
           <div class="font-bold text-lg">{item.mensa}</div>
-          <div class="text-md font-semibold text-gray-800 mt-1" {@html highlightPommes(item.name)}></div>
-          <div class="text-gray-600 text-sm mt-1" {@html highlightPommes(item.description)}></div>
+          
+          <div class="text-md font-semibold text-gray-800 mt-1">
+            {@html highlightPommes(item.name)}
+          </div>
+          
+          <div class="text-gray-600 text-sm mt-1">
+            {@html highlightPommes(item.description)}
+          </div>
+          
           {#if item.studentPrice !== null}
             <div class="text-sm text-gray-800 mt-2">💰 Preis (Studierende): CHF {item.studentPrice.toFixed(2)}</div>
           {/if}
