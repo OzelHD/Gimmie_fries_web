@@ -3,19 +3,15 @@ import preprocess from 'svelte-preprocess';
 
 const dev = process.env.NODE_ENV === 'development';
 
-const config = {
-	preprocess: preprocess(),
-	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null,
-			strict: false
-		  }),
-		paths: {
-			base: dev ? '' : '/Gimmie_fries_web'
-		},
-	}
+export default {
+  preprocess: preprocess(),
+  kit: {
+    adapter: adapter(),
+    paths: {
+      base: dev ? '' : '/Gimmie_fries_web'
+    },
+    prerender: {
+      entries: ['*']
+    }
+  }
 };
-
-export default config;
