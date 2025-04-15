@@ -13,6 +13,7 @@ const config = {
       assets: 'build',
       fallback: null,
 	  strict: false
+	  
     }),
     paths: {
       base: dev ? '' : '/Gimmie_fries_web'
