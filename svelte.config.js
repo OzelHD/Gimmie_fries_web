@@ -13,7 +13,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			base: dev ? '' : '/Gimmie_fries_web'
+			base: dev ? '' : '/Gimmie_fries_web/'
 		},
 		prerender: {
 			handleMissingId: 'warn'
